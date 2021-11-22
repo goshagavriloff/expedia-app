@@ -1,0 +1,143 @@
+
+@media (max-width: 576px) { 
+
+    body.lock{
+        overflow:hidden ;
+    }
+
+    .menu__burger{
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        
+    }
+
+    .logo,.menu__burger{
+        margin: 0 1rem;
+    }
+
+    .menu__burger span{
+        position: absolute;
+        background-color: #072F54;
+        width: 100%;
+        height: 2px;
+        left: 0; 
+        top: 9px;
+    }
+
+    .menu__burger:before,
+    .menu__burger:after{
+        content: '';
+        background-color: #072F54;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        transition: .3s;
+    }
+    .menu__burger:before{
+        top: 0;
+    }
+
+    .menu__burger:after{
+        bottom: 0;
+    }
+
+    .menu__burger.active span{
+        width: 0%;
+    }
+    
+    .menu__burger.active:before{
+        transform: rotate(45deg);
+        top: 9px;
+    }
+
+    .menu__burger.active:after{
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+
+
+    .menu{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #F2F8FC;;
+        display: none;
+        margin-top: 70px;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .menu.active{
+        display: flex;
+    }
+
+    .steps__item{
+        grid-gap:0.5rem;
+        padding: 50px 5px;
+    }
+    .promo__list{
+        display: flex;
+        flex-wrap: wrap;
+    
+    }
+
+
+ }
+
+
+@media (max-width: 768px) { 
+    .promo__list{
+        grid-template-rows: repeat(4,115px);
+    }
+    .service__list{
+        padding: 0;
+    }
+    .feature__list{
+        display: grid;   
+        grid-template-columns: repeat(2,1fr); 
+        grid-template-rows: repeat(auto-fit,470px);
+        gap: 15px 15px; 
+        grid-template-areas: 
+          "feature-1 feature-1"
+          "feature-3 feature-4"
+          "feature-2 feature-2"
+          "feature-5 feature-6"; 
+      
+    }
+
+ }
+
+
+@media (max-width: 992px) { 
+    .feature__list-item p,
+    .news h2
+    {
+        font-size: 1.5rem;
+    }
+    .flight__row{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    }
+    .flight__col:nth-child(1),
+    .flight__col:nth-child(2),
+    .flight__col:nth-child(3),
+    .flight__col:nth-child(6){
+        display: block;
+    }
+    .flight__col{
+display: none;
+    }
+    .flight__col p{
+        font-size: 1rem;
+    }
+    
+}
+
+
+@media (max-width: 1200px) { 
+    
+ }
